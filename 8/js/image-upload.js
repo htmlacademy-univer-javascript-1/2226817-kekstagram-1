@@ -38,6 +38,8 @@ const submitButton = form.querySelector('.img-upload__submit');
 let boolHashtagGlobal = true;
 let boolCommentGlobal = true;
 
+// TODO: `add stopProgagation for hashtags and comment
+
 const pristine = new Pristine(form, {
   classTo: 'text',
   errorClass: 'text--invalid',
