@@ -37,7 +37,6 @@ const closeOverlayImage = () => {
   // TODO: `remove text error when upload form appears second time
   hashtagInput.value = '';
   commentInput.value = '';
-  form.removeEventListener('submit', )
   submitButton.removeAttribute('disabled', 'true');
   form.removeEventListener('submit', submitListener);
 
