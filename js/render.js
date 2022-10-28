@@ -1,3 +1,4 @@
+import { openBigPicture } from './view-window.js';
 
 const pictureTemplate = document.querySelector('#picture').content;
 const picture = pictureTemplate.querySelector('.picture');
@@ -9,6 +10,12 @@ const renderPicture = (post) => {
   pictureClone.querySelector('.picture__likes').textContent = post.likes;
   pictureClone.querySelector('.picture__comments').textContent = post.comments.length;
   windowPictures.appendChild(pictureClone);
+
+  pictureClone.addEventListener('click', (evt) => {
+    evt.preventDefault();
+    pictureClone.blur();
+    openBigPicture(post);
+  });
 };
 
 
